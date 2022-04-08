@@ -17,8 +17,7 @@ class BlinkRunner(CameraRunner):
             while True:
                 send = False
                 message = ''
-                for name in ['front', 'back']:
-                    camera = blink.cameras[name]
+                for name, camera in blink.cameras.items():
                     camera.snap_picture()
                     blink.refresh()
                     camera.image_to_file(f'./assets/{camera.attributes["name"]}.jpg')
