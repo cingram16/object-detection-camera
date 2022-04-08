@@ -13,6 +13,7 @@ class ImageService:
         plt.imshow(pil_img)
         ax = plt.gca()
         colors = COLORS * 100
+
         for p, (xmin, ymin, xmax, ymax), c in zip(prob, boxes.tolist(), colors):
             ax.add_patch(plt.Rectangle((xmin, ymin), xmax - xmin, ymax - ymin,
                                        fill=False, color=c, linewidth=3))
@@ -20,6 +21,7 @@ class ImageService:
             text = f'{classes[cl.item()]}: {p[cl]:0.2f}'
             ax.text(xmin, ymin, text, fontsize=15,
                     bbox=dict(facecolor='yellow', alpha=0.5))
+
         plt.axis('off')
         plt.savefig('./assets/result.jpg')
         image = Image.open(open(f'./assets/result.jpg', 'rb'))
