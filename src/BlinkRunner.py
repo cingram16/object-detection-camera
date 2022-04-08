@@ -21,8 +21,8 @@ class BlinkRunner(CameraRunner):
                     camera = blink.cameras[name]
                     camera.snap_picture()
                     blink.refresh()
-                    camera.image_to_file(f'./{camera.attributes["name"]}.jpg')
-                    image = Image.open(open(f'./{camera.attributes["name"]}.jpg', 'rb'))
+                    camera.image_to_file(f'./assets/{camera.attributes["name"]}.jpg')
+                    image = Image.open(open(f'./assets/{camera.attributes["name"]}.jpg', 'rb'))
 
                     outputs = object_detection.detect(image)
                     probas_keep, bboxes_scaled, classes = object_detection.postprocess(image=image, outputs=outputs,

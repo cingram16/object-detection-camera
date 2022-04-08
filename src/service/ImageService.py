@@ -21,6 +21,6 @@ class ImageService:
             ax.text(xmin, ymin, text, fontsize=15,
                     bbox=dict(facecolor='yellow', alpha=0.5))
         plt.axis('off')
-        plt.savefig('./result.jpg')
-        image = Image.open(open(f'./result.jpg', 'rb'))
+        plt.savefig('./assets/result.jpg')
+        image = Image.open(open(f'./assets/result.jpg', 'rb'))
         image.show()
