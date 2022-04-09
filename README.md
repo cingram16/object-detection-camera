@@ -1,6 +1,6 @@
-#Object Detection Camera System
+# Object Detection Camera System
 
-###Description: 
+### Description: 
 This was a fun short project that takes images from a home security camera system, in this case Amazon Blink, 
 to run object detection on the images. Most cameras will have some sort of motion detection available to warn
 owners of activity happening outside the home. In most cases these systems can't provide much more information
@@ -9,7 +9,7 @@ See below for an example of the system determining there is a dog in direct view
 
 ![readme.png](./assets/readme.png)
 
-###Disclaimer:
+### Disclaimer:
 This project uses some technology that I did not create myself.
 
 Facebook Pre-trained Model: found on HuggingFace https://huggingface.co/facebook/detr-resnet-50
@@ -18,7 +18,7 @@ Amazon Blink Products: "Blink Wire-Free HS Home Monitoring & Alert Systems" is a
 
 Blinkpy Lib: created by Kevin Fronczak (GitHub: fronzbot) and built off of MattTW's protocol https://github.com/MattTW/BlinkMonitorProtocol
 
-###Installation: 
+### Installation: 
 
 ```
 $ git clone https://github.com/cingram16/object-detection-camera.git
@@ -26,7 +26,7 @@ $ cd object-detection-camera
 $ pip install -r requirements.txt
 ```
 
-###Usage: 
+### Usage: 
 
 Note: `blinkpy` calls out being careful with interval of requests to camera system!
 
