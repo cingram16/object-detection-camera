@@ -16,7 +16,7 @@ def parse_boolean(value):
 
 
 def main(argv):
-    parser = argparse.ArgumentParser(description="A program that accepts one string and two boolean values.")
+    parser = argparse.ArgumentParser(description="Object detection for a home security system that runs continuously at interval set.")
     parser.add_argument("--camera_system", help="Camera system brand [blink]")
     parser.add_argument("--interval", type=int, default=60, help="How often an image should be pulled for object detection (Recommended >30")
     parser.add_argument("--threshold", type=float, default=0.5, help="Object detection confidence threshold to display bounding box")
